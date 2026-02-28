@@ -27,12 +27,16 @@ repositories {
 
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-h2console'
+    //Data persistence
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
-	implementation 'org.springframework.boot:spring-boot-starter-restclient'
+	implementation 'org.springframework.boot:spring-boot-starter-web'
 	compileOnly 'org.projectlombok:lombok'
+    //Database in memory
 	runtimeOnly 'com.h2database:h2'
+    //Lombok
 	annotationProcessor 'org.projectlombok:lombok'
 	testImplementation 'org.springframework.boot:spring-boot-starter-data-jpa-test'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testImplementation 'org.springframework.boot:spring-boot-starter-restclient-test'
 	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 }
